@@ -1,0 +1,22 @@
+          <FlatList
+            data={ads}
+            horizontal={true}
+            renderItem={({item, index}) => (
+              <View style={styles.item} key={item.id}>
+                <TouchableOpacity>
+                  <Text style={{color: '#037ef3'}}>{item.title}</Text>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Text style={{color: '#52565e'}}>{item.city}</Text>
+                </TouchableOpacity>
+                <Image
+                  style={styles.logo}
+                  source={{
+                    uri:
+                      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/150px-Apple_logo_black.svg.png',
+                  }}
+                />
+              </View>
+            )}
+            keyExtractor={(item, index) => index.toString()}
+          />
